@@ -1,0 +1,15 @@
+[Unit]
+Description=Web Portal
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/web3-portal
+ExecStart=/home/ubuntu/.cargo/bin/web-portal --addr=127.0.0.1:37995
+Restart=always
+RestartSec=10
+Environment="RUST_LOG=info"
+
+[Install]
+WantedBy=multi-user.target
