@@ -44,6 +44,7 @@ jobs:
 
       - name: Auto update dev
         run: |
-          curl -i -H "Update-Secret:${{ secrets.UPDATE_SECRET }}" -X POST -F file=@target/release/web-portal https://portal.polygongas.org/service/update
+          # To do implement the update service
+          # curl -i -H "Update-Secret:${{ secrets.UPDATE_SECRET }}" -X POST -F file=@target/release/web-portal https://portal.com/service/update
           
 
